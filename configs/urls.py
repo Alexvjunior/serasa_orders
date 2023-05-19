@@ -20,7 +20,7 @@ from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 from rest_framework import permissions, routers
 
-from apps.orders.views import TokenObtainView, OrderViewSet
+from apps.orders.views import OrderViewSet, TokenObtainView
 
 router = routers.SimpleRouter()
 router.register(r"order", OrderViewSet, basename="order")
