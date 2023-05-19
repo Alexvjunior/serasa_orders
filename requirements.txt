@@ -1,0 +1,17 @@
+psycopg2-binary
+django
+djangorestframework
+djangorestframework-simplejwt
+django-filter 
+django-extensions
+django-cpf-cnpj
+pytest
+drf-yasg
+pycodestyle
+flake8
+isort
+safety
+setuptools==67.7.2
+wheel==0.40.0
+black==23.3.0
+aioredis==1.3.1

@@ -1,0 +1,3 @@
+[flake8]
+ignore = E123, E456, W789
+exclude = migrations
