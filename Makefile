@@ -32,7 +32,7 @@ build:
 
 # Run the applications
 run: build
-	docker compose up -d
+	docker compose up web -d
 
 # Run the postgres application
 run-postgres:

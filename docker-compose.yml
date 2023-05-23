@@ -7,13 +7,13 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
-      - "5432:5432"
+      - "5433:5432"
   redis:
     image: redis
     ports:
-      - "6379:6379"
+      - "6378:6379"
 
-  user:
+  web:
     build:
       context: .
       dockerfile: Dockerfile
@@ -23,12 +23,13 @@ services:
       - .:/code
     ports:
       - 8080:8000
-    depends_on:
-      - db
-      - redis
     environment:
       DBHOST: db
       REDIS_URL: redis://redis:6379
+    depends_on:
+      - db
+      - redis
+    restart: no
   
 volumes:
   postgres_data:
